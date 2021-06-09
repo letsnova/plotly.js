@@ -14,6 +14,9 @@ module.exports = function getMocks(pattern) {
     // defaults to 'all'
     pattern = pattern || '*';
 
+    // ensure string
+    pattern = String(pattern);
+
     // defaults to '.json' ext is none is provided
     if(path.extname(pattern) === '') pattern += '.json';
 
